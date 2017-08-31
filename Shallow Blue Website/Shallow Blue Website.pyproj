@@ -28,6 +28,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="Classes.py" />
+    <Compile Include="Functions.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
