@@ -1,5 +1,20 @@
 ﻿Module Classes
 
+    Class Text
+
+        Private C_text As String
+
+        Public Property text() As String
+            Get
+                Return C_text
+            End Get
+            Set(ByVal value As String)
+                C_text = value
+            End Set
+        End Property
+
+    End Class
+
     Class JSON_Class_Extracter
 
         Private C_classType As String
@@ -21,21 +36,6 @@
             End Get
             Set(ByVal value As String)
                 C_JSON_Text = value
-            End Set
-        End Property
-
-    End Class
-
-    Class Temp
-
-        Private C_tempVar As String
-
-        Public Property tempVar() As String
-            Get
-                Return C_tempVar
-            End Get
-            Set(ByVal value As String)
-                C_tempVar = value
             End Set
         End Property
 
