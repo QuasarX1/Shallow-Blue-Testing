@@ -15,6 +15,12 @@
 
     End Class
 
+    Class Query
+
+        Inherits Text
+
+    End Class
+
     Class JSON_Class_Extracter
 
         Private C_classType As String

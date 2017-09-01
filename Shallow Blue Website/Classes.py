@@ -24,6 +24,9 @@ class Text(object):
         del self._text
     text = property(getText, setText, delText, "The player's name")
 
+class Query(Text):
+    pass
+
 class Player(object):
     """Creates a player object to hold a player's data"""
 
