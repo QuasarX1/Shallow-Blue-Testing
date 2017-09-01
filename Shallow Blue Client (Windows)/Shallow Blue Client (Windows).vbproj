@@ -76,13 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Functions.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -99,6 +92,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ShallowBlueClient.Designer.vb">
+      <DependentUpon>ShallowBlueClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShallowBlueClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -106,6 +105,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShallowBlueClient.resx">
+      <DependentUpon>ShallowBlueClient.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

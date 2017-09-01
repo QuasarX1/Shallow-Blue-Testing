@@ -41,9 +41,9 @@ Module Functions
 
             firstDeserialisation = JsonConvert.DeserializeObject(Of JSON_Class_Extracter())(jsonData)
 
-        ElseIf classType = "Temp" Then
+        ElseIf classType = "Text" Then
 
-            Return JsonConvert.DeserializeObject(Of Temp)(jsonData)
+            Return JsonConvert.DeserializeObject(Of Text)(jsonData)
 
         Else
 
