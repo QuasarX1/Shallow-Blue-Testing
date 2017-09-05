@@ -1,21 +1,47 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" style=" padding:0px; margin:0px">
+
 <head>
+
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/ShallowBlueStyles.css">
+
     <meta charset="utf-8" />
+
     <title>{{pageTitle}}</title>
+
 </head>
+
 <body>
-     <aside style="float:left; width:15%; padding:0px; margin:0px">
-        <ul class="navBar_ul" style=" padding:0px; margin:0px">
-            <li><a class="{% if url == url_for('test') %}active{% endif %}" href="{{url_for('test')}}">Link 1</a></li>
+
+    <header class="jumbotron" style="background-color:aqua; margin:5px; border: 3px ridge black; border-radius:8px">
+
+        <h1 style="text-align:center">SHALLOW BLUE - {{pageTitle.upper()}}</h1>
+
+        <div style="text-align:left">{% block header %}{% endblock %}</div>
+
+    </header>
+
+     <aside style="float:left; width:15%; padding:0px; margin:5px">
+
+        <ul class="navBar_ul" style="padding:0px; margin:0px">
+
+            <li class="title">Shallow Blue<br />Navigaion</li>
+            <li><a class="{% if url == url_for('Main_Page') %}active{% endif %}" href="{{url_for('Main_Page')}}">Main Page</a></li>
             <li><a href="">Link 2</a></li>
             <li><a href="">Link 3</a></li>
             <li><a href="">Link 4</a></li>
             <li><a href="">Link 5</a></li>
+
         </ul>
+
     </aside>
-    {% block body %}{% endblock %}
+    
+    <section>
+        {% block body %}{% endblock %}
+    </section>
+
 </body>
+
 </html>

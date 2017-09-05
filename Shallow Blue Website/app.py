@@ -11,15 +11,15 @@ app = Flask(__name__)
 wsgi_app = app.wsgi_app
 
 
-@app.route('/')
-def hello():
-    """Renders a sample page."""
-    return "Hello World!"
+#@app.route('/')
+#def hello():
+#    """Renders a sample page."""
+#    return "Hello World!"
 
-@app.route('/test')
-def test():
+@app.route('/')
+def Main_Page():
     """Renders a test page."""
-    return  render_template("MainPage.html", pageTitle = "test page", url = "/test")
+    return  render_template("MainPage.html", pageTitle = "Main Page", url = "/")
 
 if __name__ == '__main__':
     import os

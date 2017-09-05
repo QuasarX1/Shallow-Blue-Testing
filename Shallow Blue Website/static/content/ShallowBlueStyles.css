@@ -1,12 +1,12 @@
 /*Nav Bar*/
-.navBar_ul
-{
+.navBar_ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 100%;
     background-color: #f1f1f1;
     border: 2px solid black;
+    border-radius: 8px
 }
 
 .navBar_ul li a {
@@ -20,6 +20,10 @@ text-decoration: none;
 text-align: center;
 border-bottom: 1px solid #555;
 }
+
+    .navBar_ul li.title {
+        background-color: royalblue;
+    }
 
 .navBar_ul li:last-child {
     border-bottom: none;
