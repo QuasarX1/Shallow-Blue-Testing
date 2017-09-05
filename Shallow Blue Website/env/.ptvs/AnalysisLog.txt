@@ -5553,3 +5553,7 @@ System.FormatException: Input string was not in a correct format.
 2017-08-31T18:31:42: Deleting 2 files
 2017-08-31T18:31:42: Deleting "C:\Users\chris\Documents\.My Documents\School\A-Level\Computer Science\Shallow Blue\Shallow Blue Website\env\.ptvs\_dummy_threading.idb"
 2017-08-31T18:31:42: Deleting "C:\Users\chris\Documents\.My Documents\School\A-Level\Computer Science\Shallow Blue\Shallow Blue Website\env\.ptvs\_dummy__threading_local.idb"
+
+2017-09-03T13:05:11: Start analysis
+2017-09-03T13:05:11: IncludeModulesFromModulePath = win32com
+2017-09-03T13:05:13: Deleting 0 files

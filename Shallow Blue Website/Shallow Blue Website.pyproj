@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\content\ShallowBlueStyles.css" />
     <Content Include="templates\MainTemplate.html" />
     <Content Include="templates\MainPage.html" />
   </ItemGroup>
@@ -48,6 +49,8 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="static\" />
+    <Folder Include="static\content\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />

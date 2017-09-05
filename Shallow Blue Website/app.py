@@ -19,7 +19,7 @@ def hello():
 @app.route('/test')
 def test():
     """Renders a test page."""
-    return  render_template("MainPage.html")
+    return  render_template("MainPage.html", pageTitle = "test page", url = "/test")
 
 if __name__ == '__main__':
     import os
@@ -28,4 +28,4 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
-    app.run(HOST, PORT)
+    app.run(HOST, PORT, threaded = True, debug = True)
