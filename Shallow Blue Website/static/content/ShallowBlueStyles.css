@@ -4,9 +4,10 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: aqua;
     border: 2px solid black;
-    border-radius: 8px
+    border-radius: 8px;
+    height: 100%
 }
 
 .navBar_ul li a {
@@ -21,20 +22,70 @@ text-align: center;
 border-bottom: 1px solid #555;
 }
 
-    .navBar_ul li.title {
-        background-color: royalblue;
-    }
+.navBar_ul li.title {
+    background-color: royalblue;
+    color: white
+}
 
 .navBar_ul li:last-child {
     border-bottom: none;
 }
 
 .navBar_ul li a.active {
-    background-color: #4CAF50;
+    background-color: goldenrod;
     color: white;
 }
 
 .navBar_ul li a:hover:not(.active) {
-    background-color: #555;
+    background-color: royalblue;
+    color: white;
+}
+
+/*Score Bar*/
+.scoreBar_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 8px
+}
+
+.scoreBar_ul li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.scoreBar_ul li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+.scoreBar_ul li.title {
+    background-color: royalblue;
+    color: white
+}
+
+.scoreBar_ul li:nth-child(2) {
+    background-color: gold;
+}
+
+.scoreBar_ul li:nth-child(3) {
+    background-color: silver;
+}
+
+.scoreBar_ul li:nth-child(4) {
+    background-color: saddlebrown;
+}
+
+.scoreBar_ul li:last-child {
+    border-bottom: none;
+}
+
+.scoreBar_ul li a:hover {
+    background-color: royalblue;
     color: white;
 }
