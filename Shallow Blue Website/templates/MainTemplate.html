@@ -16,47 +16,59 @@
 
 <body>
 
-    <header class="jumbotron" style="background-color:aqua; margin:5px; border: 3px ridge black; border-radius:8px">
+    <div class="container">
 
-        <h1 style="text-align:center">SHALLOW BLUE - {{pageTitle.upper()}}</h1>
+        <header class="row">
 
-        <div style="text-align:left">{% block header %}{% endblock %}</div>
+            <div class=" col_xs_12 jumbotron" style="background-color:aqua;/* margin:5px;*/ border: 3px ridge black; border-radius:8px">
 
-    </header>
+                <h1 style="text-align:center">SHALLOW BLUE - {{pageTitle.upper()}}</h1>
 
-     <aside style="float:left; width:15%; margin:5px; margin-top:0">
+                <div style="text-align:left">{% block header %}{% endblock %}</div>
 
-        <ul class="navBar_ul">
+            </div>
 
-            <li class="title">Shallow Blue<br />Navigaion</li>
-            <li><a class="{% if url == url_for('Main_Page') %}active{% endif %}" href="{{url_for('Main_Page')}}">Main Page</a></li>
-            <li><a href="">Link 2</a></li>
-            <li><a href="">Link 3</a></li>
-            <li><a href="">Link 4</a></li>
-            <li><a href="">Link 5</a></li>
+        </header>
 
-        </ul>
+        <div class="row">
 
-    </aside>
+            <aside class="col_xs_3">
 
-    <aside style="float:right; width:15%; margin:5px; margin-top:0">
+                <ul class="navBar_ul">
 
-        <ul class="scoreBar_ul">
+                    <li class="title">Shallow Blue<br />Navigaion</li>
+                    <li><a class="{% if url == url_for('Main_Page') %}active{% endif %}" href="{{url_for('Main_Page')}}">Main Page</a></li>
+                    <li><a href="">Link 2</a></li>
+                    <li><a href="">Link 3</a></li>
+                    <li><a href="">Link 4</a></li>
+                    <li><a href="">Link 5</a></li>
 
-            <li class="title">Shallow Blue<br />Navigaion</li>
-            <li><a href="{{url_for('Main_Page')}}">Main Page</a></li>
-            <li><a href="">Link 2</a></li>
-            <li><a href="">Link 3</a></li>
-            <li><a href="">Link 4</a></li>
-            <li><a href="">Link 5</a></li>
+                </ul>
 
-        </ul>
+            </aside>
 
-    </aside>
-    
-    <section>
-        {% block body %}{% endblock %}
-    </section>
+            <section class="col_xs_6">
+                {% block body %}{% endblock %}
+            </section>
+
+            <aside class="col_xs_3">
+
+                <ul class="scoreBar_ul">
+
+                    <li class="title">Shallow Blue<br />Navigaion</li>
+                    <li><a href="{{url_for('Main_Page')}}">Main Page</a></li>
+                    <li><a href="">Link 2</a></li>
+                    <li><a href="">Link 3</a></li>
+                    <li><a href="">Link 4</a></li>
+                    <li><a href="">Link 5</a></li>
+
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </div>
 
 </body>
 
