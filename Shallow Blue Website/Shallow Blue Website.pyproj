@@ -37,6 +37,7 @@
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\ShallowBlueStyles.css" />
     <Content Include="static\content\site.css" />
+    <Content Include="static\content\test.json" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
@@ -56,6 +57,7 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <None Include="static\scripts\_references.js" />
+    <Content Include="static\scripts\ShallowBlue.js" />
     <Content Include="templates\MainTemplate.html" />
     <Content Include="templates\MainPage.html" />
   </ItemGroup>

@@ -4,6 +4,7 @@ It contains the definition of routes and views for the application.
 """
 
 from Classes import *
+import datetime
 from flask import Flask, render_template
 app = Flask(__name__)
 
@@ -20,6 +21,12 @@ wsgi_app = app.wsgi_app
 def Main_Page():
     """Renders a test page."""
     return  render_template("MainPage.html", pageTitle = "Main Page", url = "/")
+
+@app.route("/data/news-bar")
+def newsBar():
+    """Returns the latest news in responce to an AJAX request"""
+    time = datetime.datetime.now().time()
+    return str(time.hour) + ":" + str(time.minute) #Return query to db as to lates news
 
 if __name__ == '__main__':
     import os

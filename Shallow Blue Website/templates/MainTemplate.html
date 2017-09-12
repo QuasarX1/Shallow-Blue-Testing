@@ -6,9 +6,31 @@
 
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
 
+    <link rel="stylesheet" type="text/css" href="/static/content/ShallowBlueStyles.css">
+
+    <script src="/static/scripts/jquery-1.10.2.min.js"></script>
+
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/static/content/ShallowBlueStyles.css">
+    <script src="/static/scripts/ShallowBlue.js"></script>
+
+    <script>
+
+        window.onload = function ()
+        {
+            var intervalLoop = setInterval(updateCalls, 1000 * 300);/*1000 ms = ~1 s*/
+
+            function updateCalls()
+            {
+                get_news()
+            }
+            function abortTimer()
+            {
+                clearInterval(intervalLoop);
+            }
+        };
+
+    </script>
 
     <meta charset="utf-8" />
 
@@ -16,7 +38,7 @@
 
 </head>
 
-<body>
+<body style="background-color: midnightblue">
 
     <div class="container-fluid">
 
@@ -78,9 +100,13 @@
 
         </div>
 
-        <div class="scroll-left"> <p> Today's News: ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---?ABCDEFG---? </p> </div>
+        <div class="scroll-left" style="position: fixed; bottom: 0; width: 100%" onload="document.getElementById('news-bar').innerHTML = get_news();"> <p style="font-size: 3em"><b id="news-bar"> STAY POSTED FOR THE LATEST NEWS </b></p> </div>
+
+        <button onclick="get_news();">refresh news</button>
 
     </div>
+
+    <marque behavior="scroll" direction="left">Your scrolling text goes herehhhhhhhhhhh</marque>
 
 </body>
 
