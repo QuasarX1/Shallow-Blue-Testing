@@ -28,8 +28,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
-    <Compile Include="Classes.py" />
-    <Compile Include="Functions.py" />
+    <Compile Include="Classes\assortedClasses.py" />
+    <Compile Include="Classes\dbModels.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDependencies\sqlalchemy_db_object.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDependencies\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\dataTransfer.py" />
+    <Compile Include="Functions\dbFunctions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
@@ -82,7 +100,10 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="CommonDependencies\" />
     <Folder Include="databases\" />
+    <Folder Include="Functions\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
