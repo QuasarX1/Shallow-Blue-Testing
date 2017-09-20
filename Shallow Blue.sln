@@ -7,7 +7,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Shallow Blue Website", "Sha
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Shallow Blue Client (Windows)", "Shallow Blue Client (Windows)\Shallow Blue Client (Windows).vbproj", "{2ED20EC9-404C-4EDE-B775-CB046DD3B145}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ShallowBlueCentralDBServer", "ShallowBlueCentralDBServer\ShallowBlueCentralDBServer.pyproj", "{DDD50820-8F11-4840-B58D-25C85E36A0A8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B048D4F-6BE3-4063-93D2-E76D6C50BC50}"
+	ProjectSection(SolutionItems) = preProject
+		Use Cases.txt = Use Cases.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +26,6 @@ Global
 		{2ED20EC9-404C-4EDE-B775-CB046DD3B145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ED20EC9-404C-4EDE-B775-CB046DD3B145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ED20EC9-404C-4EDE-B775-CB046DD3B145}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DDD50820-8F11-4840-B58D-25C85E36A0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDD50820-8F11-4840-B58D-25C85E36A0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDD50820-8F11-4840-B58D-25C85E36A0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDD50820-8F11-4840-B58D-25C85E36A0A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

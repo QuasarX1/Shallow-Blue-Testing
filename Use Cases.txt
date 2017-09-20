@@ -1,0 +1,40 @@
+Use Case 1 - Administrator
+	
+	Login needed
+
+	All access
+
+	All of the below with access to the database and admin dashboard.
+
+Use Case 2 - Organiser
+	
+	Login needed
+
+	Create event
+	Add players
+	Remove players
+	View ALL data
+
+	Should be able to create an event via the account page and invite players to the
+	event. Also same abilitys as player.
+
+Use Case 3 - Player
+	
+	Login needed
+
+	Join event
+	Edit OWN data
+	View PERMITTED data
+
+	Should be able to view and modify account info via website account page. From same
+	page, there should be an option to join an event. Once confirmed, auto routed link
+	to event page (event code entered automaticly) where permitted event data may be
+	viewed.
+
+Use Case 4 - Spectator
+	
+	Event code needed
+
+	View PERMITTED data
+
+	Should be able to acces the permitted event data via the website using an event code

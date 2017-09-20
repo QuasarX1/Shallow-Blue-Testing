@@ -1,0 +1,8 @@
+email_dispatched
+threading
+DNS_NAME
+socket
+sanitize_address
+BaseMail
+Mail
+smtplib

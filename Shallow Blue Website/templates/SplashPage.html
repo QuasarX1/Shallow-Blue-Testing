@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="/static/content/ShallowBlueStyles.css">
+
+    <script src="/static/scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+
+    <script src="/static/scripts/ShallowBlue.js"></script>
+
+    <meta charset="utf-8" />
+
+    <title>{{pageTitle}}</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <header class="jumbotron" style="background-color:aqua; margin-top:0px; border: 3px ridge black; border-radius:8px">
+
+            <h1 style="text-align:center">SHALLOW BLUE - {{pageTitle.upper()}}</h1>
+
+        </header>
+
+        <div class="row" style="margin-right: 0; margin-left: 0">
+
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-3">
+
+                {% if loggedIn == False %}<a href="{{url_for("LoginPage")}}"><img class="splashScreenIconImage" alt="Login Icon" /></a><br /><p class="splashScreenIconCaption">Login</p>{% else %}<a href="{{url_for("LogoutPage")}}"><img class="splashScreenIconImage" alt="Logout Icon" /></a><br /><p class="splashScreenIconCaption">Logout</p>{% endif %}
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <a href="{{url_for("AccountPage")}}"><img class="splashScreenIconImage" alt="Account Page Icon" /></a>
+                <br />
+                <p class="splashScreenIconCaption">My Account</p>
+
+            </div>
+
+            <div class="col-sm-3"></div>
+
+        </div>
+
+        <div class="row" style="margin-right: 0; margin-left: 0">
+
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-3">
+
+                <a href="{{url_for("Spectate")}}"><img class="splashScreenIconImage" alt="Spectator Page Icon" /></a>
+                <br />
+                <p class="splashScreenIconCaption">Spectate An Event</p>
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <a href="{{url_for("EventsPage")}}"><img class="splashScreenIconImage" alt="Events Page Icon" /></a>
+                <br />
+                <p class="splashScreenIconCaption">Events</p>
+
+            </div>
+
+            <div class="col-sm-3"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

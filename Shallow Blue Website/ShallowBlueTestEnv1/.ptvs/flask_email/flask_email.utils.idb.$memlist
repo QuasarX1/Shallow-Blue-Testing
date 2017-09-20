@@ -1,0 +1,7 @@
+_resolve_name
+socket
+CachedDnsName
+import_module
+DNS_NAME
+unicode_literals
+sys

@@ -1,0 +1,7 @@
+mail
+FlaskTestCase
+LocmemBackendTests
+BaseEmailBackendTests
+with_statement
+EmailMessage
+Mail
