@@ -3345,3 +3345,7 @@ System.FormatException: Input string was not in a correct format.
 2017-09-20T00:53:01: Saving group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\tests"
 2017-09-20T00:53:01: End of group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\tests"
 2017-09-20T00:53:02: Deleting 0 files
+
+2017-09-24T14:51:37: Start analysis
+2017-09-24T14:51:37: IncludeModulesFromModulePath = win32com
+2017-09-24T14:51:39: Deleting 0 files
