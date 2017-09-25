@@ -10,6 +10,14 @@
 
         <!-- Form Here -->
 
+        <form method="POST">
+
+            {{form.userName.label(class="formText")}} {{form.userName(id="userName")}}
+            {{form.password.label(class="formText")}} {{form.password(id="password")}}
+            {{form.loginButton()}}
+
+        </form>
+
     </div>
 
     <div class="col-sm-3"></div>

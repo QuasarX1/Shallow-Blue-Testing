@@ -7,3 +7,4 @@ To get only a single object use 'from Classes.<fileName> import <objectName>'
 
 from .assortedClasses import *
 from .dbModels import *
+from .forms import *

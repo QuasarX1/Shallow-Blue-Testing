@@ -10,7 +10,7 @@ from Classes import *
 from Functions import *
 import datetime
 from functools import wraps
-from flask import Flask, render_template, url_for, redirect, session
+from flask import Flask, render_template, url_for, redirect, session, request
 from flask_sqlalchemy import SQLAlchemy
 
 #Create app object-----------------------------------------------------------------------------
@@ -86,16 +86,13 @@ def SplashPage(loggedIn):
 
     print(loggedIn)
 
-    if not session:
-        loggedIn = False
-    else:
-        loggedIn = True
-
     return  render_template("SplashPage.html", pageTitle = "Home", url = "/", loggedIn = loggedIn)
 
 @app.route("/login", methods = ["GET", "POST"])
 @login_test
 def LoginPage(loggedIn):
+
+    form = LoginForm()
 
     if loggedIn == True:
 
@@ -105,29 +102,45 @@ def LoginPage(loggedIn):
 
         if request.method == "GET":
 
-            return render_template("LoginPage.html")
+            return render_template("LoginPage.html", pageTitle = "Login", form = form)
 
         else:
-            
-            session.add(loggedIn = True)
 
-            return None
+            if form.validate_on_submit():
+            
+                session["loggedIn"] = True
+                #session["userID"] =
+                #session["userName"] =
+
+                return redirect(url_for("SplashPage"))
+
+            else:
+
+                return render_template("LoginPage.html", pageTitle = "Login", form = form)
 
 @app.route("/logout")
-def LogoutPage():
-    return None
+@login_test
+def LogoutPage(loggedIn):
+    
+    if loggedIn == True:
+
+        session.pop("loggedIn")
+        #session.pop("userID")
+        #session.pop("userName")
+
+    return redirect(url_for("SplashPage"))
 
 @app.route("/acount")
 def AccountPage():
-    return None
+    return ""
 
 @app.route("/watch")
 def Spectate():
-    return None
+    return ""
 
 @app.route("/events")
 def EventsPage():
-    return None
+    return ""
 
 @app.route('/mainPage')
 @login_required
@@ -150,9 +163,9 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
-    #app.run(HOST, PORT, threaded = True, debug = False)
+    app.run(HOST, PORT, threaded = True, debug = False)
 
     """For being viewed by other people (navigate to {my ipV4 adress}:5555/)"""
-    import socket
-    print(socket.gethostbyname(socket.gethostname()))
-    app.run(host = "0.0.0.0", port = 5555, threaded = True)
+    #import socket
+    #print("http://" + socket.gethostbyname(socket.gethostname()) + ":5555/")
+    #app.run(host = "0.0.0.0", port = 5555, threaded = True)

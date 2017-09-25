@@ -3426,3 +3426,7 @@ System.FormatException: Input string was not in a correct format.
 2017-09-25T17:23:50: [ERROR] wtforms.i18n.messages_path: Unknown has no name
 2017-09-25T17:23:50: End of group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms"
 2017-09-25T17:23:51: Deleting 0 files
+
+2017-09-25T17:32:00: Start analysis
+2017-09-25T17:32:00: IncludeModulesFromModulePath = win32com
+2017-09-25T17:32:01: Deleting 0 files
