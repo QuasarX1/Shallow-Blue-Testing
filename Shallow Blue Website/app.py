@@ -17,6 +17,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+#Configure secret key-------------------------------------------------------------------------
+
+app.config["SECRET_KEY"] = "Random string"
+
 #Connect to db---------------------------------------------------------------------------------
 
 baseDir = os.path.abspath(os.path.dirname(__file__))
