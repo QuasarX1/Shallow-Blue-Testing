@@ -104,6 +104,8 @@
     <Content Include="static\content\test.json" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
+    <Content Include="templates\AdminPagesTemplate.html" />
+    <Content Include="templates\LoginPage.html" />
     <Content Include="templates\SplashPage.html" />
     <None Include="static\scripts\jquery.validate-vsdoc.js" />
     <None Include="static\scripts\jquery-1.10.2.intellisense.js" />

@@ -3349,3 +3349,80 @@ System.FormatException: Input string was not in a correct format.
 2017-09-24T14:51:37: Start analysis
 2017-09-24T14:51:37: IncludeModulesFromModulePath = win32com
 2017-09-24T14:51:39: Deleting 0 files
+
+2017-09-25T17:23:43: Start analysis
+2017-09-25T17:23:43: IncludeModulesFromModulePath = win32com
+2017-09-25T17:23:44: Including c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf because flask_wtf.csrf needs updating
+2017-09-25T17:23:44: Including c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms because wtforms.compat needs updating
+2017-09-25T17:23:44: Deleting 0 files
+2017-09-25T17:23:44: astropy.CallDepth = 0
+2017-09-25T17:23:44: delphixpy.CallDepth = 0
+2017-09-25T17:23:44: matplotlib.CallDepth = 3
+2017-09-25T17:23:44: pandas.CallDepth = 0
+2017-09-25T17:23:44: sympy.CallDepth = 0
+2017-09-25T17:23:44: Start group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf" with 11 files
+2017-09-25T17:23:45: Parsing complete
+2017-09-25T17:23:45: Analyzing "flask_wtf.csrf" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\csrf.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.file" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\file.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.form" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\form.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.html5" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\html5.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.i18n" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\i18n.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf._compat" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\_compat.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\__init__.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.recaptcha.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\recaptcha\fields.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.recaptcha.validators" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\recaptcha\validators.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.recaptcha.widgets" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\recaptcha\widgets.py")
+2017-09-25T17:23:45: Analyzing "flask_wtf.recaptcha" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf\recaptcha\__init__.py")
+2017-09-25T17:23:45: Starting analysis of 11 modules
+2017-09-25T17:23:46: Analysis complete
+2017-09-25T17:23:46: Saving group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf"
+2017-09-25T17:23:47: End of group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\flask_wtf"
+2017-09-25T17:23:47: Start group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms" with 40 files
+2017-09-25T17:23:47: Parsing complete
+2017-09-25T17:23:47: Analyzing "wtforms.compat" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\compat.py")
+2017-09-25T17:23:47: Analyzing "wtforms.form" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\form.py")
+2017-09-25T17:23:47: Analyzing "wtforms.i18n" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\i18n.py")
+2017-09-25T17:23:47: Analyzing "wtforms.meta" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\meta.py")
+2017-09-25T17:23:47: Analyzing "wtforms.utils" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\utils.py")
+2017-09-25T17:23:47: Analyzing "wtforms.validators" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\validators.py")
+2017-09-25T17:23:47: Analyzing "wtforms" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.csrf.core" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\csrf\core.py")
+2017-09-25T17:23:47: Analyzing "wtforms.csrf.session" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\csrf\session.py")
+2017-09-25T17:23:47: Analyzing "wtforms.csrf" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\csrf\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.appengine.db" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\appengine\db.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.appengine.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\appengine\fields.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.appengine.ndb" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\appengine\ndb.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.appengine" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\appengine\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.csrf.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\csrf\fields.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.csrf.form" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\csrf\form.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.csrf.session" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\csrf\session.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.csrf" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\csrf\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.dateutil.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\dateutil\fields.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.dateutil" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\dateutil\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.django.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\django\fields.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.django.i18n" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\django\i18n.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.django.orm" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\django\orm.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.django" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\django\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.django.templatetags.wtforms" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\django\templatetags\wtforms.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.django.templatetags" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\django\templatetags\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.i18n.form" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\i18n\form.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.i18n.utils" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\i18n\utils.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.i18n" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\i18n\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.sqlalchemy.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\sqlalchemy\fields.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.sqlalchemy.orm" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\sqlalchemy\orm.py")
+2017-09-25T17:23:47: Analyzing "wtforms.ext.sqlalchemy" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\ext\sqlalchemy\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.fields.core" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\fields\core.py")
+2017-09-25T17:23:47: Analyzing "wtforms.fields.html5" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\fields\html5.py")
+2017-09-25T17:23:47: Analyzing "wtforms.fields.simple" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\fields\simple.py")
+2017-09-25T17:23:47: Analyzing "wtforms.fields" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\fields\__init__.py")
+2017-09-25T17:23:47: Analyzing "wtforms.widgets.core" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\widgets\core.py")
+2017-09-25T17:23:47: Analyzing "wtforms.widgets.html5" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\widgets\html5.py")
+2017-09-25T17:23:47: Analyzing "wtforms.widgets" ("c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms\widgets\__init__.py")
+2017-09-25T17:23:47: Starting analysis of 40 modules
+2017-09-25T17:23:49: Analysis complete
+2017-09-25T17:23:49: Saving group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms"
+2017-09-25T17:23:50: [ERROR] wtforms.ext.appengine.fields.KeyPropertyField.KeyPropertyField: Unknown has no name
+2017-09-25T17:23:50: [ERROR] wtforms.i18n.messages_path: Unknown has no name
+2017-09-25T17:23:50: End of group "c:\users\chris\documents\.my documents\school\a-level\computer science\shallow blue\shallow blue website\shallowbluetestenv1\lib\site-packages\wtforms"
+2017-09-25T17:23:51: Deleting 0 files

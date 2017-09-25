@@ -58,7 +58,7 @@ def login_test(test):
     return wrap
 
 def login_required(test):
-    """Ensures a user is logged in or returns them to the splash page."""
+    """Ensures a user is logged in or returns them to the login page."""
 
     @wraps(test)
     def wrap(*args, **kwargs):
@@ -69,7 +69,7 @@ def login_required(test):
 
         else:
 
-            return redirect(url_for("SplashPage"))
+            return redirect(url_for("LoginPage"))
 
     return wrap
 
@@ -89,9 +89,25 @@ def SplashPage(loggedIn):
 
     return  render_template("SplashPage.html", pageTitle = "Home", url = "/", loggedIn = loggedIn)
 
-@app.route("/login")
-def LoginPage():
-    return None
+@app.route("/login", methods = ["GET", "POST"])
+@login_test
+def LoginPage(loggedIn):
+
+    if loggedIn == True:
+
+        return redirect(url_for("SplashPage"))
+
+    else:
+
+        if request.method == "GET":
+
+            return render_template("LoginPage.html")
+
+        else:
+            
+            session.add(loggedIn = True)
+
+            return None
 
 @app.route("/logout")
 def LogoutPage():
