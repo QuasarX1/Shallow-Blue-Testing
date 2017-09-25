@@ -38,14 +38,38 @@
 
             <div class="col-sm-3">
 
-                {% if loggedIn == False %}<a href="{{url_for("LoginPage")}}"><img class="splashScreenIconImage" alt="Login Icon" /></a><br /><p class="splashScreenIconCaption">Login</p>{% else %}<a href="{{url_for("LogoutPage")}}"><img class="splashScreenIconImage" alt="Logout Icon" /></a><br /><p class="splashScreenIconCaption">Logout</p>{% endif %}
+                {% if loggedIn == False %}
+                    
+                    <a class="btn btn-default" href="{{url_for("LoginPage")}}" aria-label="Login Icon">
 
-            </div>
+                        <i class="fa fa-sign-in" style="font-size: 12em;" aria-hidden="true"></i><br />
+
+                    </a><br />
+
+                    <p class="splashScreenIconCaption">Login</p>
+
+                    {% else %}
+                        
+                        <a class="btn btn-default" href="{{url_for("LogoutPage")}}" aria-label="Logout Icon">
+
+                            <i class="fa fa-sign-out" style="font-size: 12em;" aria-hidden="true"></i><br />
+
+                        </a><br />
+
+                    <p class="splashScreenIconCaption">Logout</p>
+
+                    {% endif %}
+
+</div>
 
             <div class="col-sm-3">
 
-                <a href="{{url_for("AccountPage")}}"><img class="splashScreenIconImage" alt="Account Page Icon" /></a>
-                <br />
+                <a class="btn btn-default" href="{{url_for("AccountPage")}}" aria-label="Account Page Icon">
+
+                    <i class="fa fa-sign-out" style="font-size: 12em;" aria-hidden="true"></i><br />
+
+                </a><br />
+
                 <p class="splashScreenIconCaption">My Account</p>
 
             </div>
@@ -59,17 +83,25 @@
             <div class="col-sm-3"></div>
 
             <div class="col-sm-3">
+                
+                <a class="btn btn-default" href="{{url_for("Spectate")}}" aria-label="Spectator Page Icon">
 
-                <a href="{{url_for("Spectate")}}"><img class="splashScreenIconImage" alt="Spectator Page Icon" /></a>
-                <br />
+                    <i class="fa fa-binoculars" style="font-size: 12em;" aria-hidden="true"></i><br />
+
+                </a><br />
+
                 <p class="splashScreenIconCaption">Spectate An Event</p>
 
             </div>
 
             <div class="col-sm-3">
 
-                <a href="{{url_for("EventsPage")}}"><img class="splashScreenIconImage" alt="Events Page Icon" /></a>
-                <br />
+                <a class="btn btn-default" href="{{url_for("EventsPage")}}" aria-label="Events Page Icon">
+
+                    <i class="fa fa-calendar" style="font-size: 12em;" aria-hidden="true"></i><br />
+
+                </a><br />
+
                 <p class="splashScreenIconCaption">Events</p>
 
             </div>

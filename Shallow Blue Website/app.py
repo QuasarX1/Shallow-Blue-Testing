@@ -3,18 +3,23 @@ This script runs the application using a development server.
 It contains the definition of routes and views for the application.
 """
 
+#Imports---------------------------------------------------------------------------------------
+
 import os
 from Classes import *
 from Functions import *
 import datetime
-from flask import Flask, render_template, redirect, session
+from functools import wraps
+from flask import Flask, render_template, url_for, redirect, session
 from flask_sqlalchemy import SQLAlchemy
+
+#Create app object-----------------------------------------------------------------------------
 
 app = Flask(__name__)
 
-baseDir = os.path.abspath(os.path.dirname(__file__))
+#Connect to db---------------------------------------------------------------------------------
 
-#dbFileName = input("Database file name:\n")
+baseDir = os.path.abspath(os.path.dirname(__file__))
 
 print("sqlite:///" + os.path.join(baseDir, os.path.join("databases", "testDB.sqlite")))
 
@@ -30,12 +35,52 @@ if not os.path.exists(app.config["SQLALCHEMY_DATABASE_URI"]):
     with app.app_context():
         db.create_all()
 
-# Make the WSGI interface available at the top level so wfastcgi can get it.
+# Make the WSGI interface available at the top level so wfastcgi can get it.-------------------
+
 wsgi_app = app.wsgi_app
 
+#Decorarors------------------------------------------------------------------------------------
+
+def login_test(test):
+    """Tests if a user is logged in."""
+
+    @wraps(test)
+    def wrap(*args, **kwargs):
+
+        if "loggedIn" in session:
+
+            return test(*args, loggedIn = True, **kwargs)
+
+        else:
+
+            return test(*args, loggedIn = False, **kwargs)
+
+    return wrap
+
+def login_required(test):
+    """Ensures a user is logged in or returns them to the splash page."""
+
+    @wraps(test)
+    def wrap(*args, **kwargs):
+
+        if "loggedIn" in session:
+
+            return test(*args, loggedIn = True, **kwargs)
+
+        else:
+
+            return redirect(url_for("SplashPage"))
+
+    return wrap
+
+#Routes----------------------------------------------------------------------------------------
+
 @app.route('/')
-def SplashPage():
+@login_test
+def SplashPage(loggedIn):
     """Renders the splash page that all users first encounter."""
+
+    print(loggedIn)
 
     if not session:
         loggedIn = False
@@ -65,6 +110,7 @@ def EventsPage():
     return None
 
 @app.route('/mainPage')
+@login_required
 def Main_Page():
     """Renders the main page."""
     return  render_template("MainPage.html", pageTitle = "Main Page", url = "/mainPage")
@@ -75,6 +121,8 @@ def newsBar():
     time = datetime.datetime.now().time()
     return str(time.hour) + ":" + str(time.minute) #Return query to db as to lates news
 
+#Run app if executed---------------------------------------------------------------------------
+
 if __name__ == '__main__':
 
     HOST = os.environ.get('SERVER_HOST', 'localhost')
@@ -82,4 +130,9 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
-    app.run(HOST, PORT, threaded = True, debug = False)
+    #app.run(HOST, PORT, threaded = True, debug = False)
+
+    """For being viewed by other people (navigate to {my ipV4 adress}:5555/)"""
+    import socket
+    print(socket.gethostbyname(socket.gethostname()))
+    app.run(host = "0.0.0.0", port = 5555, threaded = True)
