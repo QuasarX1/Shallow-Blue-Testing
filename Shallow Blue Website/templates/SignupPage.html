@@ -1,0 +1,33 @@
+﻿{% extends "AdminPagesTemplate.html" %}
+
+{% block body %}
+
+<div class="row" style="margin-right: 0; margin-left: 0">
+
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
+
+        <form method="POST">
+
+            {{form.userName.label(class="formText")}} {{form.userName(id="userName")}}
+            <br />
+            {{form.email.label(class="formText")}} {{form.email(id="email")}}
+            <br />
+            {{form.password.label(class="formText")}} {{form.password()}}
+            <br />
+            {{form.passwordRepeat.label(class="formText")}} {{form.passwordRepeat()}}
+            <br />
+            {{form.signupButton()}}
+
+        </form>
+
+        <p>Already got an account? - <a href="{{url_for("LoginPage")}}">Login here</a></p>
+
+    </div>
+
+    <div class="col-sm-3"></div>
+
+</div>
+
+{% endblock %}

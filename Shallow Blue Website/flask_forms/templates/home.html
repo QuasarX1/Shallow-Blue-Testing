@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <!-- Container (Welcome Section) -->
+  <div id="welcome" class="container text-center">
+    <br>
+    <br><br><br>
+    <h3 >Welcome</h3>
+    <p><em>Flask WTF example</em></p>
+    <br>
+  </div>  
+
+
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container">
+      <br>
+      <br><br><br>
+
+      <div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <p style="color:red">{{ message }}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('home') }}" method=post>
+          <div class="form-group">
+   
+            {{ form.hidden_tag() }}
+
+            {{ form.name.label }}
+            {% for message in form.name.errors %}
+              <div style="color:red">{{ message }}</div>
+            {% endfor %}
+            {{ form.name(class_='form-control') }}<br>
+
+            {{ form.email.label }}
+            {% for message in form.email.errors %}
+              <div style="color:red">{{ message }}</div>
+            {% endfor %}
+            {{ form.email(class_='form-control') }}<br>
+
+
+            {{ form.subject.label }}
+            {% for message in form.subject.errors %}
+              <div style="color:red">{{ message }}</div>
+            {% endfor %}
+            {{ form.subject(class_='form-control') }}<br>
+
+            {{ form.message.label }}
+            {% for message in form.message.errors %}
+              <div style="color:red">{{ message }}</div>
+            {% endfor %}
+            {{ form.message(class_='form-control') }}<br>
+
+            {{ form.submit(class_='btn btn-primary') }}
+
+          </div>  
+        </form>
+ 
+  </div>
+  </div>
+
+</div>
+
+{% endblock %}

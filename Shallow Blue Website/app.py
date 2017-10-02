@@ -27,7 +27,7 @@ baseDir = os.path.abspath(os.path.dirname(__file__))
 
 print("sqlite:///" + os.path.join(baseDir, os.path.join("databases", "testDB.sqlite")))
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(baseDir, os.path.join("databases", "testDB.sqlite"))
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(baseDir, os.path.join("databases", "shallowBlueDB.sqlite"))
 
 app.config["SQLALCHMEY_COMMIT_ON_TEARDOWN"] = True
 
@@ -35,9 +35,12 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app) #Requires the db Variable from Classes\dbModels.py
 
-if not os.path.exists(app.config["SQLALCHEMY_DATABASE_URI"]):
-    with app.app_context():
-        db.create_all()
+if __name__ == '__main__':
+
+    if not os.path.exists(app.config["SQLALCHEMY_DATABASE_URI"]):
+        with app.app_context():
+            db.create_all()
+            addEvent("eventName", datetime.datetime.now(), "info")
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.-------------------
 
@@ -100,23 +103,47 @@ def LoginPage(loggedIn):
 
     else:
 
-        if request.method == "GET":
+        if form.validate_on_submit():
 
-            return render_template("LoginPage.html", pageTitle = "Login", form = form)
+            #query db
 
-        else:
-
-            if form.validate_on_submit():
+            #if data matches
             
-                session["loggedIn"] = True
-                #session["userID"] =
-                #session["userName"] =
+            session["loggedIn"] = True
+            #session["userID"] =
+            #session["userName"] =
 
-                return redirect(url_for("SplashPage"))
+            return redirect(url_for("SplashPage"))
 
-            else:
+        return render_template("LoginPage.html", pageTitle = "Login", form = form)
 
-                return render_template("LoginPage.html", pageTitle = "Login", form = form)
+@app.route("/signup", methods = ["GET", "POST"])
+@login_test
+def SignupPage(loggedIn):
+
+    form = SignupForm()
+
+    if loggedIn == True:
+
+        return redirect(url_for("SplashPage"))
+
+    else:
+
+        if form.validate_on_submit():
+
+            #query db
+
+            #if data dosen't conflict
+
+            #add data to db
+            
+            session["loggedIn"] = True
+            #session["userID"] =
+            #session["userName"] =
+
+            return redirect(url_for("SplashPage"))
+
+        return render_template("SignupPage.html", pageTitle = "Login", form = form)
 
 @app.route("/logout")
 @login_test

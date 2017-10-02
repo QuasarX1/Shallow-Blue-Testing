@@ -44,6 +44,12 @@
     <Compile Include="CommonDependencies\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="dbTest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="flask_forms\forms.py" />
+    <Compile Include="flask_forms\myApp.py" />
+    <Compile Include="flask_forms\run.py" />
     <Compile Include="Functions\dataTransfer.py" />
     <Compile Include="Functions\dbFunctions.py">
       <SubType>Code</SubType>
@@ -53,6 +59,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="flask_forms\static\mystyle.css" />
+    <Content Include="flask_forms\templates\home.html" />
+    <Content Include="flask_forms\templates\layout.html" />
+    <Content Include="flask_forms\__pycache__\forms.cpython-35.pyc" />
+    <Content Include="flask_forms\__pycache__\myApp.cpython-35.pyc" />
+    <Content Include="flask_forms\__pycache__\views.cpython-35.pyc" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap-grid.css" />
     <Content Include="static\content\bootstrap-grid.css.map" />
@@ -108,6 +120,7 @@
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="templates\AdminPagesTemplate.html" />
+    <Content Include="templates\SignupPage.html" />
     <Content Include="templates\LoginPage.html" />
     <Content Include="templates\SplashPage.html" />
     <None Include="static\scripts\jquery.validate-vsdoc.js" />
@@ -151,6 +164,10 @@
     <Folder Include="Classes\" />
     <Folder Include="CommonDependencies\" />
     <Folder Include="databases\" />
+    <Folder Include="flask_forms\" />
+    <Folder Include="flask_forms\static\" />
+    <Folder Include="flask_forms\templates\" />
+    <Folder Include="flask_forms\__pycache__\" />
     <Folder Include="Functions\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />

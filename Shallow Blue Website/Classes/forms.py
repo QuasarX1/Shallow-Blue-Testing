@@ -1,31 +1,33 @@
-from flask.ext.wtf import Form
-from wtforms import StringField, PasswordField, IntegerField, SubmitField
-from wtforms.validators import Required, EqualTo
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, IntegerField, SubmitField, ValidationError
+from wtforms.validators import EqualTo, Email, InputRequired, Required
 
-class NameForm(Form):
+class NameForm(FlaskForm):
 
-    name = StringField("What is your name", validators = [Required()])
+    name = StringField("What is your name", validators = [InputRequired()])
 
     submit = SubmitField("Submit")
 
-class LoginForm(Form):
+class LoginForm(FlaskForm):
 
-    userName = StringField("Username", validators = [Required()])
+    userName = StringField("Username", validators = [Required(message="This is a required field")])
 
-    password = PasswordField("Password", validators = [Required()])
+    password = PasswordField("Password", validators = [Required(message="This is a required field")])
 
     loginButton = SubmitField("Login")
 
-class SignupForm(Form):
+class SignupForm(FlaskForm):
 
-    userName = StringField("Username", validators = [Required()])
+    userName = StringField("Username", validators = [InputRequired(message="This is a required field")])
 
-    password = PasswordField("Password", validators = [Required()])
+    email = StringField("Email", validators = [InputRequired(message="This is a required field"), Email()])
 
-    passwordRepeat = PasswordField("Repeat Password", validators = [Required(), EqualTo("password", message='Passwords must match')])
+    password = PasswordField("Password", validators = [InputRequired(message="This is a required field")])
+
+    passwordRepeat = PasswordField("Repeat Password", validators = [InputRequired(message="This is a required field"), EqualTo("password", message='Passwords must match')])
 
     signupButton = SubmitField("Signup")
 
-class SpectateForm(Form):
+class SpectateForm(FlaskForm):
 
-    eventID = IntegerField("Event ID", validators = [Required()])
+    eventID = IntegerField("Event ID", validators = [InputRequired()])

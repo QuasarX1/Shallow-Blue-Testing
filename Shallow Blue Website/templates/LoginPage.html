@@ -8,8 +8,6 @@
 
     <div class="col-sm-6">
 
-        <!-- Form Here -->
-
         <form method="POST">
 
             {{form.userName.label(class="formText")}} {{form.userName(id="userName")}}
@@ -17,6 +15,8 @@
             {{form.loginButton()}}
 
         </form>
+
+        <p>Not got an account? - <a href="{{url_for("SignupPage")}}">Signup here</a></p>
 
     </div>
 
