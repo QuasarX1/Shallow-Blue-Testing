@@ -21,11 +21,24 @@
             <Rectangle Name="TitleBar" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" MinWidth="100" MinHeight="100" Fill="DeepSkyBlue" />
 
             <TextBlock Text="Test"  RelativePanel.AlignVerticalCenterWith="TitleBar" RelativePanel.AlignHorizontalCenterWith="TitleBar" FontWeight="Bold" FontSize="72" />
-            
+
+            <Grid Name="NavBar" Background="Blue" MinWidth="50" RelativePanel.AlignTopWith="TitleBar" RelativePanel.AlignLeftWithPanel="True" Margin="0,100,0,-860">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+
+            </Grid>
+
+            <Rectangle Name="NewsBar" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" MinWidth="100" MinHeight="100" Fill="Red" />
+
         </RelativePanel>
-
+        
         <Border Grid.Row="1" />
-
+        
     </Grid>
     
 </Page>
