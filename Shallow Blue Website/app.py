@@ -91,6 +91,11 @@ def SplashPage(loggedIn):
 
     return  render_template("SplashPage.html", pageTitle = "Home", url = "/", loggedIn = loggedIn)
 
+@app.route('/client/')
+@login_test
+def Client_SplashPage(loggedIn):
+    """Renders the splash page that all users first encounter."""
+
 @app.route("/login", methods = ["GET", "POST"])
 @login_test
 def LoginPage(loggedIn):

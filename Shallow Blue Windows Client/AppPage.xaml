@@ -1,0 +1,170 @@
+﻿<Page
+    x:Class="Shallow_Blue_Windows_Client.AppPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Shallow_Blue_Windows_Client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+    <Grid Background="Blue">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+
+        <RelativePanel Grid.Row="0">
+
+            <Border Name="TitleBar" BorderBrush="DarkBlue" BorderThickness="2" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" MinWidth="100" MinHeight="100">
+
+                <Rectangle Fill="DeepSkyBlue" />
+
+            </Border>
+
+            <TextBlock Text="Shallow Blue"  RelativePanel.AlignVerticalCenterWith="TitleBar" RelativePanel.AlignHorizontalCenterWith="TitleBar" FontWeight="Bold" FontSize="72" />
+
+            <Border Name="NavBar" BorderBrush="DarkBlue" BorderThickness="2 0 2 0" MinWidth="150" RelativePanel.Below="TitleBar" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Above="NewsBar">
+            
+                <Grid Background="DeepSkyBlue">
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="30" />
+
+                    </Grid.RowDefinitions>
+
+                    <Rectangle Grid.Row="0" Fill="Blue" />
+
+                    <Border Grid.Row="1" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle />
+
+                    </Border>
+
+                    <Border Grid.Row="2" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle />
+
+                    </Border>
+
+                    <Border Grid.Row="3" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle />
+
+                    </Border>
+
+                    <Border Grid.Row="4" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle />
+
+                    </Border>
+
+                    <Border Grid.Row="5" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Fill="Gray" />
+                        
+                    </Border>
+
+                </Grid>
+
+            </Border>
+
+            <Border Name="ScoreBar" BorderBrush="DarkBlue" BorderThickness="2 0 2 0" MinWidth="150" RelativePanel.Below="TitleBar" RelativePanel.AlignRightWithPanel="True" RelativePanel.Above="NewsBar">
+
+                <Grid Background="DeepSkyBlue">
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+
+                    </Grid.RowDefinitions>
+
+                    <RelativePanel Grid.Row="0">
+
+                        <Rectangle Name="LeaderBoardTitleBackground" Fill="Blue" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" />
+
+                        <TextBlock Name="LeaderBoardTitleText1" Text="Leader" RelativePanel.AlignHorizontalCenterWith="LeaderBoardTitleBackground" FontWeight="Bold" FontSize="27" />
+
+                        <TextBlock Name="LeaderBoardTitleText2" Text="Board" RelativePanel.AlignHorizontalCenterWith="LeaderBoardTitleText1" RelativePanel.Below="LeaderBoardTitleText1" FontWeight="Bold" FontSize="27" />
+
+                    </RelativePanel>
+                    
+                    <Border Grid.Row="1" Name="ScoreBarPlace1" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Fill="Gold" />
+
+                    </Border>
+
+                    <Border Grid.Row="2" Name="ScoreBarPlace2" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="2" Fill="Silver" />
+
+                    </Border>
+
+                    <Border Grid.Row="3" Name="ScoreBarPlace3" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="3" Fill="SaddleBrown" />
+
+                    </Border>
+
+                    <Border Grid.Row="4" Name="ScoreBarPlace4" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="3" />
+
+                    </Border>
+
+                    <Border Grid.Row="5" Name="ScoreBarPlace5" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="3" />
+
+                    </Border>
+
+                    <Border Grid.Row="6" Name="ScoreBarPlace6" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="3" />
+
+                    </Border>
+
+                    <Border Grid.Row="7" Name="ScoreBarPlace7" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="3" />
+
+                    </Border>
+
+                    <Border Grid.Row="8" Name="ScoreBarPlace8" BorderBrush="DarkBlue" BorderThickness="0 2 0 0">
+
+                        <Rectangle Grid.Row="3" />
+
+                    </Border>
+
+                </Grid>
+
+            </Border>
+
+            <Border Name="NewsBar" BorderBrush="DarkBlue" BorderThickness="2" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" MinWidth="100" MinHeight="100">
+            
+                <Rectangle Fill="Red" />
+
+            </Border>
+            
+        </RelativePanel>
+
+    </Grid>
+</Page>
