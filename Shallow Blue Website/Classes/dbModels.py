@@ -39,7 +39,7 @@ class Events(db.Model):
     __tablename__ = "events"
     id = db.Column(db.Integer, primary_key = True)
     event_name = db.Column(db.String)
-    event_start_date = db.Column(db.DateTime)
+    event_start_date_time = db.Column(db.DateTime)
     event_info = db.Column(db.Text(64))
 
     players_link_reference = db.relationship("PlayersToEvents", backref = "link_table_reference_events")

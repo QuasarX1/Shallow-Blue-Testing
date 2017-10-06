@@ -29,7 +29,13 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="Classes\assortedClasses.py" />
+    <Compile Include="Classes\comunicationClasses.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Classes\dbModels.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\entityClasses.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\forms.py">
@@ -59,6 +65,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\configs\add-ons\README.txt" />
     <Content Include="flask_forms\static\mystyle.css" />
     <Content Include="flask_forms\templates\home.html" />
     <Content Include="flask_forms\templates\layout.html" />
@@ -161,6 +168,8 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="assets\configs\" />
+    <Folder Include="assets\configs\add-ons\" />
     <Folder Include="Classes\" />
     <Folder Include="CommonDependencies\" />
     <Folder Include="databases\" />
@@ -169,6 +178,7 @@
     <Folder Include="flask_forms\templates\" />
     <Folder Include="flask_forms\__pycache__\" />
     <Folder Include="Functions\" />
+    <Folder Include="assets\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\content\font-awesome-4.7.0\" />

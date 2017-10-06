@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, IntegerField, SubmitField, ValidationError
+from wtforms import StringField, PasswordField, IntegerField, SubmitField, RadioField, ValidationError
 from wtforms.validators import EqualTo, Email, InputRequired, Required
 
 class NameForm(FlaskForm):
@@ -31,3 +31,9 @@ class SignupForm(FlaskForm):
 class SpectateForm(FlaskForm):
 
     eventID = IntegerField("Event ID", validators = [InputRequired()])
+
+class MatchResultForm(FlaskForm):
+
+    matchID = IntegerField("Match ID", validators = [InputRequired()])
+
+    byeSelecter = RadioField('Label', choices=[('value','description'),('value_two','whatever')])
