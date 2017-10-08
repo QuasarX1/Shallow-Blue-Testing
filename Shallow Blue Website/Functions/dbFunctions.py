@@ -18,44 +18,56 @@ addNewPlayer
 importPlayerProfile - email? - flask module?
 """
 
-def addEvent(eventName, startDate, info):
-    
-    db.session.add(Events(event_name = eventName, event_start_date = startDate, event_info = info))
+def addEvent(app, eventName, startDateTime, info):
 
-    db.session.commit()
+    with app.app_context():
 
-def deleteEvent(event_id):
+        db.session.add(Events(event_name = eventName, event_start_date_time = startDateTime, event_info = info))
+        
+        db.session.commit()
 
-    event = Events.query.filter_by(id = event_id)
+def deleteEvent(app, event_id):
 
-    db.session.delete(event)
+    with app.app_context():
 
-    db.session.commit()
+        event = Events.query.filter_by(id = event_id)
 
-def addPlayer(first_name, last_name, account_password, dob, chess_rating):
+        db.session.delete(event)
 
-    db.session.add(Players(first_name = first_name, last_name = last_name, account_password = account_password, dob = dob, chess_rating = chess_rating))
+        db.session.commit()
 
-    db.session.commit()
+def addPlayer(app, first_name, last_name, account_password, dob, chess_rating):
 
-def deleteEvent(player_id):
+    with app.app_context():
 
-    player = Players.query.filter_by(id = player_id)
+        db.session.add(Players(first_name = first_name, last_name = last_name, account_password = account_password, dob = dob, chess_rating = chess_rating))
 
-    db.session.delete(player)
+        db.session.commit()
 
-    db.session.commit()
+def deletePlayer(app, player_id):
 
-def joinEvent(player_id, event_id):
+    with app.app_context():
 
-    db.session.add(PlayersToEvents(player_id = player_id, event_id = event_id))
+        player = Players.query.filter_by(id = player_id)
 
-    db.session.commit()
+        db.session.delete(player)
 
-def deleteEvent(pair_id):
+        db.session.commit()
 
-    link = PlayersToEvents.query.filter_by(pair_id = pair_id)
+def joinEvent(app, player_id, event_id):
 
-    db.session.delete(link)
+    with app.app_context():
 
-    db.session.commit()
+        db.session.add(PlayersToEvents(player_id = player_id, event_id = event_id))
+
+        db.session.commit()
+
+def leaveEvent(app, pair_id):
+
+    with app.app_context():
+
+        link = PlayersToEvents.query.filter_by(pair_id = pair_id)
+
+        db.session.delete(link)
+
+        db.session.commit()

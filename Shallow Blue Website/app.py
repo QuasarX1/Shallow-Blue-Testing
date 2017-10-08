@@ -40,7 +40,6 @@ if __name__ == '__main__':
     if not os.path.exists(app.config["SQLALCHEMY_DATABASE_URI"]):
         with app.app_context():
             db.create_all()
-            addEvent("eventName", datetime.datetime.now(), "info")
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.-------------------
 

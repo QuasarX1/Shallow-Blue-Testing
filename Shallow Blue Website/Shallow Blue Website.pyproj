@@ -63,6 +63,9 @@
     <Compile Include="Functions\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\configs\add-ons\README.txt" />
